@@ -1,0 +1,19 @@
+apiVersion: v2
+publisher: budparr
+name: language-hugo-vscode
+version: 1.1.0
+type: VS Code extension
+displayName: Support for Test Extension
+title: Support for Test Extension
+description: This VS Code extension provides support for Go.
+icon: https://www.eclipse.org/che/images/logo-eclipseche.svg
+repository: https://github.com/RickJWagner/vscode-extension-test
+category: Debugger
+firstPublicationDate: "2019-07-08"
+spec:
+  containers:
+    - image: "registry.redhat.io/codeready-workspaces/stacks-golang-rhel8"
+      name: ricks-test-extension
+      memoryLimit: "512Mi"
+  extensions:
+    - https://github.com/RickJWagner/vscode-extension-test/releases/download/0.1/language-hugo-vscode-1.1.0_vsixhub.com.vsix
